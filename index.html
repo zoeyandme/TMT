@@ -2336,7 +2336,7 @@ function MenuScreen({ nameInput, setNameInput, setPlayerName, onStart, user, sta
           onClick={() => { setPlayerName(user ? user.name : (nameInput || "Guest")); onStart("bot"); }}>
           <WeldonAvatar size={32} /> Play vs Weldon
         </button>
-        <button style={{ ...styles.btn, background: "#7C3AED", opacity: 0.6, cursor: "not-allowed" }} disabled>
+        <button style={{ ...styles.btn, background: "#7C3AED", opacity: 0.6, cursor: pointer }}>
           🌐 Find Opponent (Coming Soon)
         </button>
       </div>
