@@ -2336,7 +2336,7 @@ function MenuScreen({ nameInput, setNameInput, setPlayerName, onStart, user, sta
           onClick={() => { setPlayerName(user ? user.name : (nameInput || "Guest")); onStart("bot"); }}>
           <WeldonAvatar size={32} /> Play vs Weldon
         </button>
-        <button style={{ ...styles.btn, background: "#7C3AED", opacity: 0.6, cursor: pointer }}>
+        <button style={{ ...styles.btn, background: "#7C3AED", opacity: 0.6, cursor: "not-allowed" }} disabled>
           🌐 Find Opponent (Coming Soon)
         </button>
       </div>
@@ -2441,7 +2441,7 @@ function QuestionScreen({ q, playerAnswer, onAnswer, playerName, botName, weldon
               ...(playerAnswer !== null && playerAnswer !== c ? { opacity: 0.5 } : {}),
             }}
             onClick={() => onAnswer(c)}
-            {playerAnswer !== null || questionTimedOut}
+            disabled={playerAnswer !== null || questionTimedOut}
           >
             {c}
           </button>
@@ -2636,7 +2636,7 @@ function ChallengeQuestionScreen({ q, onAnswer, challengeAnswer, defenderName })
               ...(challengeAnswer !== null && challengeAnswer !== c ? { opacity:0.5 } : {}),
             }}
             onClick={() => onAnswer(c)}
-            {challengeAnswer !== null}>
+            disabled={challengeAnswer !== null}>
             {c}
           </button>
         ))}
