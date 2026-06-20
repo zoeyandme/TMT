@@ -2441,7 +2441,7 @@ function QuestionScreen({ q, playerAnswer, onAnswer, playerName, botName, weldon
               ...(playerAnswer !== null && playerAnswer !== c ? { opacity: 0.5 } : {}),
             }}
             onClick={() => onAnswer(c)}
-            disabled={playerAnswer !== null || questionTimedOut}
+            ={playerAnswer !== null || questionTimedOut}
           >
             {c}
           </button>
@@ -2636,7 +2636,7 @@ function ChallengeQuestionScreen({ q, onAnswer, challengeAnswer, defenderName })
               ...(challengeAnswer !== null && challengeAnswer !== c ? { opacity:0.5 } : {}),
             }}
             onClick={() => onAnswer(c)}
-            disabled={challengeAnswer !== null}>
+            ={challengeAnswer !== null}>
             {c}
           </button>
         ))}
